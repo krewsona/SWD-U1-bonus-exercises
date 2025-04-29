@@ -1,0 +1,24 @@
+{
+  "name": "swd-u1-bonus-exercises",
+  "version": "1.0.0",
+  "description": "These exercises will give you extra practice on fundamental concepts! Each file has some of the work already done to serve as examples, and the rest of the instructions are marked with TODO so you can finish it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carolista/SWD-U1-bonus-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carolista/SWD-U1-bonus-exercises/issues"
+  },
+  "homepage": "https://github.com/Carolista/SWD-U1-bonus-exercises#readme",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "readline-sync": "^1.4.10"
+  }
+}

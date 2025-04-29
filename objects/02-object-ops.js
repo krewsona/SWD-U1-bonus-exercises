@@ -30,7 +30,8 @@
 // 	console.log(sunsetDiner[someKey]);
 // // }
 
-// // Did you notice that the value for knownFor is an array? What if we need to loop through that as well? Let's put a regular for loop (for arrays) inside the for...in loop (for objects).
+//  Did you notice that the value for knownFor is an array? What if we need to loop through that as well? Let's put a regular for loop (for arrays) inside the for...in loop (for objects).
+
 
 // // Let's say we don't know which keys have arrays, but we need to print only the elements in any arrays found. We'll use a conditional with the helpful Array method .isArray() to see if the key holds an array in the first place, then loop to print the array's contents if that evaluates to true.
 // for (let aKey in sunsetDiner) {
@@ -41,7 +42,17 @@
 // 	}
 // }
 
-// // Okay we know now what all the keys and data structures are. Let's use all its information to print a cohesive and useful statement in a template literal. Pay attention to the syntax of all the references in the placeholders.
+// Let's say we don't know which keys have arrays, but we need to print only the elements in any arrays found. We'll use a conditional with the helpful Array method .isArray() to see if the key holds an array in the first place, then loop to print the array's contents if that evaluates to true.
+for (let aKey in sunsetDiner) {
+	if (Array.isArray(sunsetDiner[aKey])) {
+		for (el of sunsetDiner[aKey]) {
+			console.log(el);
+		}
+	}
+}
+
+
+ // Okay we know now what all the keys and data structures are. Let's use all its information to print a cohesive and useful statement in a template literal. Pay attention to the syntax of all the references in the placeholders.
 // console.log(`\nNext time you take a road trip through the Southwest, don't miss ${sunsetDiner.name} in ${sunsetDiner.location}, best in class for its ${sunsetDiner.cuisine} fare. Signature dishes include the mouth-watering ${sunsetDiner.knownFor[0]}, ${sunsetDiner.knownFor[1]}, and the delicious ${sunsetDiner.knownFor[2]}. \nPrice rating: ${sunsetDiner.priceRating}\n`);
 
 // // That's all well and good, but we've made it very specific to the Sunset Diner with the variable name for the object. This template literal could be really useful for multiple restaurants. Let's create a couple more restaurants.

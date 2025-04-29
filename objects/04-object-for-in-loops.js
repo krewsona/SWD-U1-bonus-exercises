@@ -90,8 +90,8 @@ for (let packageType in pantry) {
 	console.log(`\n${packageType.toUpperCase()}`);
 	console.log("-".repeat(packageType.length));
 	// Now we will set up a regular for loop inside to handle printing each element of each array.
-	for (let i=0; i < pantry[packageType].length; i++) {
-		console.log(pantry[packageType][i]);
+	for (let foodItem of packageType) {
+		console.log(foodItem);
 	}
 }
 // Run the program to see the results in the console. Nicely formatted, right? Notice how each array had a different number of items, but we handled that by taking the length of each array, as pantry[packageType] is the correct way to refer to the value of each property.
